@@ -216,7 +216,8 @@ public class HomeController implements Controller {
       // If home version is more recent than current version
       if (home.getVersion() > Home.CURRENT_VERSION) {
         // Warn the user that view will display a home created with a more recent version 
-        getView().invokeLater(new Runnable() { 
+        // Warn the user that view will display a home created with a more recent version
+        getView().invokeLater(new Runnable() {
             public void run() {
               String message = preferences.getLocalizedString(HomeController.class, 
                   "moreRecentVersionHome", home.getName());
@@ -256,6 +257,7 @@ public class HomeController implements Controller {
     homeView.setEnabled(HomeView.ActionType.SORT_HOME_FURNITURE_BY_WIDTH, true);
     homeView.setEnabled(HomeView.ActionType.SORT_HOME_FURNITURE_BY_HEIGHT, true);
     homeView.setEnabled(HomeView.ActionType.SORT_HOME_FURNITURE_BY_DEPTH, true);
+    homeView.setEnabled(HomeView.ActionType.SORT_HOME_FURNITURE_BY_VOLUME, true);
     homeView.setEnabled(HomeView.ActionType.SORT_HOME_FURNITURE_BY_X, true);
     homeView.setEnabled(HomeView.ActionType.SORT_HOME_FURNITURE_BY_Y, true);
     homeView.setEnabled(HomeView.ActionType.SORT_HOME_FURNITURE_BY_ELEVATION, true);
@@ -276,7 +278,8 @@ public class HomeController implements Controller {
     homeView.setEnabled(HomeView.ActionType.DISPLAY_HOME_FURNITURE_NAME, true); 
     homeView.setEnabled(HomeView.ActionType.DISPLAY_HOME_FURNITURE_WIDTH, true); 
     homeView.setEnabled(HomeView.ActionType.DISPLAY_HOME_FURNITURE_DEPTH, true); 
-    homeView.setEnabled(HomeView.ActionType.DISPLAY_HOME_FURNITURE_HEIGHT, true); 
+    homeView.setEnabled(HomeView.ActionType.DISPLAY_HOME_FURNITURE_HEIGHT, true);
+    homeView.setEnabled(HomeView.ActionType.DISPLAY_HOME_FURNITURE_VOLUME, true);
     homeView.setEnabled(HomeView.ActionType.DISPLAY_HOME_FURNITURE_X, true); 
     homeView.setEnabled(HomeView.ActionType.DISPLAY_HOME_FURNITURE_Y, true); 
     homeView.setEnabled(HomeView.ActionType.DISPLAY_HOME_FURNITURE_ELEVATION, true); 
