@@ -1309,9 +1309,9 @@ public class FurnitureTable extends JTable implements View, Printable {
              int row, int column) {
           if (value != null) {
             if (property == HomePieceOfFurniture.SortableProperty.VOLUME) {
-              value = NumberFormat.getNumberInstance().format((Float)value);
+              value = preferences.getLengthUnit().getVolumeFormatWithUnit().format((Float)value);
             } else {
-              value = preferences.getLengthUnit().getFormat().format((Float) value);
+              value = preferences.getLengthUnit().getFormat().format((Float)value);
             }
           }
           setHorizontalAlignment(JLabel.RIGHT);
