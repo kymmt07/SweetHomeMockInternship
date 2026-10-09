@@ -599,7 +599,7 @@ public class HomePieceOfFurniture extends HomeObject implements PieceOfFurniture
    * Returns the volume of this piece of furniture.
    */
   public float getVolume() {
-    return this.volume;
+    return getWidth() * getHeight() * getDepth();
   }
 
   /**

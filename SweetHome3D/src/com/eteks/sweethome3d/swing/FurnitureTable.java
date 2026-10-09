@@ -1220,7 +1220,7 @@ public class FurnitureTable extends JTable implements View, Printable {
         case HEIGHT : 
           return getSizeRenderer(HomePieceOfFurniture.SortableProperty.HEIGHT, preferences);
         case VOLUME :
-          return getSizeRenderer(HomePieceOfFurniture.SortableProperty.HEIGHT, preferences);
+          return getSizeRenderer(HomePieceOfFurniture.SortableProperty.VOLUME, preferences);
         case X : 
           return getSizeRenderer(HomePieceOfFurniture.SortableProperty.X, preferences);
         case Y :
@@ -1300,7 +1300,7 @@ public class FurnitureTable extends JTable implements View, Printable {
      * Returns a renderer that converts the displayed <code>property</code> of a piece of furniture 
      * to inch in case preferences unit us equal to INCH. 
      */
-    private TableCellRenderer getSizeRenderer(HomePieceOfFurniture.SortableProperty property,
+    private TableCellRenderer getSizeRenderer(final HomePieceOfFurniture.SortableProperty property,
                                               final UserPreferences preferences) {
       // Renderer super class used to display sizes
       class SizeRenderer extends DefaultTableCellRenderer {
